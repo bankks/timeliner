@@ -27,7 +27,7 @@
 					.removeClass('closed')
 					.addClass('open')
 					.animate({ fontSize: settings.fontOpen }, settings.baseSpeed);
-				$(eventBody).show(settings.speed*settings.baseSpeed);
+				$(eventBody).slideDown(settings.speed*settings.baseSpeed);
 			}
 
 			function closeEvent(eventHeading,eventBody) {
@@ -35,7 +35,7 @@
 					.animate({ fontSize: settings.fontClosed }, 0)
 					.removeClass('open')
 					.addClass('closed');
-				$(eventBody).hide(settings.speed*settings.baseSpeed);
+				$(eventBody).slideUp(settings.speed*settings.baseSpeed);
 			}
 
 			// If startState option is set to closed, hide all the events; else, show fully expanded upon load
